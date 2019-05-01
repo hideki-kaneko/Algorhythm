@@ -29,8 +29,6 @@ int CalcCost(int i, int j)
     int minCost = INT_MAX;
     for (int k = i; k <= j - 1; k++)
     {
-        int c1 = CalcCost(i, k);
-        int c2 = CalcCost(k + 1, j);
         int cost = CalcCost(i, k) + CalcCost(k + 1, j) + g_C[i - 1] * g_C[k] * g_C[j];
         if (cost <= minCost)
         {
